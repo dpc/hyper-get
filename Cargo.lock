@@ -1,0 +1,79 @@
+[root]
+name = "hyper-get"
+version = "0.0.1"
+dependencies = [
+ "hyper 0.0.1 (git+https://github.com/hyperium/hyper.git)",
+]
+
+[[package]]
+name = "cookie"
+version = "0.0.1"
+source = "git+https://github.com/alexcrichton/cookie-rs#cbeb942c35bc130e578725ab829ff3cb976a7c92"
+dependencies = [
+ "openssl 0.2.1 (git+https://github.com/sfackler/rust-openssl)",
+ "time 0.1.0 (git+https://github.com/rust-lang/time)",
+ "url 0.1.0 (git+https://github.com/servo/rust-url)",
+]
+
+[[package]]
+name = "gcc"
+version = "0.1.0"
+source = "git+https://github.com/alexcrichton/gcc-rs#96c9e44ce3dfccc47c16fcfd743a33b3b4205daf"
+
+[[package]]
+name = "hyper"
+version = "0.0.1"
+source = "git+https://github.com/hyperium/hyper.git#b1761ad4e1bce98deb73827df5b134b141c574d5"
+dependencies = [
+ "cookie 0.0.1 (git+https://github.com/alexcrichton/cookie-rs)",
+ "mime 0.0.1 (git+https://github.com/hyperium/mime.rs)",
+ "openssl 0.2.1 (git+https://github.com/sfackler/rust-openssl)",
+ "time 0.1.0 (git+https://github.com/rust-lang/time)",
+ "unsafe-any 0.1.1 (git+https://github.com/reem/rust-unsafe-any)",
+ "url 0.1.0 (git+https://github.com/servo/rust-url)",
+]
+
+[[package]]
+name = "mime"
+version = "0.0.1"
+source = "git+https://github.com/hyperium/mime.rs#7898f1c29c7f5d35d0c3c7aed37ebcfc95a40873"
+
+[[package]]
+name = "openssl"
+version = "0.2.1"
+source = "git+https://github.com/sfackler/rust-openssl#c3603b0db00d044c8332d39dd9d49e3c76a2a978"
+dependencies = [
+ "openssl-sys 0.2.1 (git+https://github.com/sfackler/rust-openssl)",
+]
+
+[[package]]
+name = "openssl-sys"
+version = "0.2.1"
+source = "git+https://github.com/sfackler/rust-openssl#c3603b0db00d044c8332d39dd9d49e3c76a2a978"
+dependencies = [
+ "pkg-config 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "pkg-config"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "time"
+version = "0.1.0"
+source = "git+https://github.com/rust-lang/time#afab521f3b91658a3ba2d3e877b7e01699733bef"
+dependencies = [
+ "gcc 0.1.0 (git+https://github.com/alexcrichton/gcc-rs)",
+]
+
+[[package]]
+name = "unsafe-any"
+version = "0.1.1"
+source = "git+https://github.com/reem/rust-unsafe-any#eb3fe87bea85f375b8fcefa0cdecfd131fae9624"
+
+[[package]]
+name = "url"
+version = "0.1.0"
+source = "git+https://github.com/servo/rust-url#9f05a0108025a1c9002e8977a42dce764895d170"
+

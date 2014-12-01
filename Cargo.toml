@@ -1,0 +1,15 @@
+[package]
+
+name = "hyper-get"
+version = "0.0.1"
+authors = ["Dawid Ciężarkiewicz <dpc@ucore.info>"]
+
+
+[[bin]]
+name = "hget"
+path = "src/hget.rs"
+
+[dependencies.hyper]
+git = "https://github.com/hyperium/hyper.git"
+
+
