@@ -50,11 +50,11 @@ impl HttpFetcher for BasicFetcher {
 }
 
 pub struct FollowingFetcher<'a> {
-    fetcher : &'a HttpFetcher + 'a
+    fetcher : &'a (HttpFetcher + 'a)
 }
 
 impl<'a> FollowingFetcher<'a> {
-    pub fn new(fetcher : &'a HttpFetcher + 'a) -> FollowingFetcher<'a> {
+    pub fn new(fetcher : &'a (HttpFetcher + 'a)) -> FollowingFetcher<'a> {
         FollowingFetcher { fetcher: fetcher }
     }
 }
@@ -93,12 +93,12 @@ impl<'a> HttpFetcher for FollowingFetcher<'a> {
 
 pub struct RetryingFetcher<'a> {
     retries : uint,
-    fetcher : &'a HttpFetcher + 'a
+    fetcher : &'a (HttpFetcher + 'a)
 }
 
 
 impl<'a> RetryingFetcher<'a> {
-    pub fn new(fetcher : &'a HttpFetcher + 'a, retries : uint) -> RetryingFetcher<'a> {
+    pub fn new(fetcher : &'a (HttpFetcher + 'a), retries : uint) -> RetryingFetcher<'a> {
         RetryingFetcher{ fetcher: fetcher, retries: retries }
     }
 }
