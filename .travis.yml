@@ -1,0 +1,10 @@
+language: rust
+before_script:
+  - rustc -v
+  - cargo -V
+script:
+  - make
+notifications:
+    email:
+      on_success: change
+      on_failure: change
